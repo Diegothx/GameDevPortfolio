@@ -1,0 +1,20 @@
+:root {
+  --color-bg-primary: #0B090A;
+  --color-bg-secondary: #161A1D;
+
+  --color-bg-card: #A4161A;
+  --color-bg-card-hover: #660708;
+
+  --color-accent: #BA181B;
+  --color-accent-hover: #E5383B;
+
+  --color-text-primary: #F5F3F4;
+  --color-text-secondary: #D3D3D3;
+
+  --color-border: #B1A7A6;
+
+  --container-max-width: 1200px;
+
+  --font-family-body: "Inter", sans-serif;
+  --font-family-display: "Space Grotesk", sans-serif;
+}

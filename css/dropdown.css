@@ -1,0 +1,105 @@
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.dropdown {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   DROPDOWN BUTTON
+========================================================= */
+
+.dropbtn {
+  height: 100%;
+  padding: 0 20px;
+
+  border: none;
+  background: transparent;
+
+  color: var(--color-text-secondary);
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.dropbtn span {
+  margin-left: 5px;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   DROPDOWN CONTENT
+========================================================= */
+
+.dropdown-content {
+  position: absolute;
+
+  top: 100%;
+  right: 0;
+
+  display: none;
+
+  min-width: 190px;
+
+  background-color: var(--color-bg-primary);
+
+  border: 1px solid rgba(177, 167, 166, 0.15);
+  border-top: none;
+
+  border-radius: 0 0 6px 6px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   DROPDOWN LINKS
+========================================================= */
+
+.dropdown-content a {
+  display: block;
+
+  padding: 14px 16px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-card-hover);
+}
+
+
+/* =========================================================
+   DROPDOWN HOVER
+========================================================= */
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-card-hover);
+}
