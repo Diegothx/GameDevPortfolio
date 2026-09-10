@@ -1,0 +1,240 @@
+/* ========================================
+   PROJECTS
+======================================== */
+
+.projects { 
+  background-color: var(--color-bg-primary);
+}
+.projects-container  {
+  width: var(--container-max-width);
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.projects-container > h2 {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-family-display);
+  font-size: 3rem;
+  line-height: 1.1;
+
+}
+
+/* ========================================
+   FEATURED PROJECT
+======================================== */
+
+.featured-project {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: 70px;
+
+  margin-bottom: 40px;
+}
+
+/* Segundo proyecto:
+   contenido izquierda / imagen derecha */
+
+.featured-project:nth-of-type(2) {
+  grid-template-columns: 1fr 2fr;
+}
+
+/* ========================================
+   PROJECT IMAGE
+======================================== */
+
+.project-image {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(177, 167, 166, 0.25);
+  border-radius: 16px;
+
+  background-color: var(--color-bg-secondary);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45);
+
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.project-image::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(229, 56, 59, 0.12),
+      transparent 45%
+    );
+
+  pointer-events: none;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+/* ========================================
+   PROJECT INFO
+======================================== */
+
+.featured-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ========================================
+   PROJECT META
+======================================== */
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  font-family: var(--font-family-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: var(--color-text-secondary);
+}
+
+.project-meta span:first-child {
+  color: var(--color-accent-hover);
+}
+
+.project-meta span + span::before {
+  content: "•";
+
+  margin-right: 10px;
+
+  color: var(--color-border);
+}
+
+/* ========================================
+   PROJECT TITLE
+======================================== */
+
+.featured-info h3 {
+  margin: 0 0 25px;
+
+  font-family: var(--font-family-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+
+  color: var(--color-text-primary);
+}
+
+/* ========================================
+   TAG LIST
+======================================== */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-bottom: 30px;
+}
+
+.tag-list span {
+  padding: 8px 13px;
+
+  border: 1px solid rgba(177, 167, 166, 0.3);
+  border-radius: 999px;
+
+  background-color: rgba(22, 26, 29, 0.7);
+
+  font-family: var(--font-family-body);
+  font-size: 0.78rem;
+  line-height: 1.35;
+
+  color: var(--color-text-secondary);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.tag-list span:hover {
+  border-color: var(--color-accent);
+
+  background-color: var(--color-bg-card);
+
+  color: var(--color-text-primary);
+}
+
+/* ========================================
+   PROJECT LINK
+======================================== */
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid var(--color-accent);
+
+  font-family: var(--font-family-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  color: var(--color-text-primary);
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.project-link span {
+  color: var(--color-accent-hover);
+
+  font-size: 1.15rem;
+
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover { 
+  color: var(--color-accent-hover);
+
+  border-color: var(--color-accent-hover);
+} 

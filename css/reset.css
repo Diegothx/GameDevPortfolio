@@ -15,8 +15,7 @@ html {
 body {
   background: var(--color-bg-secondary);
   color: var( --color-text-primary);
-  font-family: var(--font-family-body);
-  line-height: 1.6;
+  font-family: var(--font-family-body); 
   overflow-x: hidden;
 }
 
